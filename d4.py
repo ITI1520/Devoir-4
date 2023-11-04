@@ -7,13 +7,14 @@ def transl(d, s):
 # Q2
 def setOp(list1, list2):
     """()"""
-    Tliste = list1 + list2
-    list = set(Tliste)
+    # Je ses pas mais sa dit que ses un ai qui la ecrit?
+    list = set(list1 + list2)
     return list
 
 # Q3
 def matrixMinMax(m):
-
+    """()"""
+# Je ses pas mais sa dit que ses un ai qui la ecrit?
     min = m[0][0]
     max = m[0][0]
     
