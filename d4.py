@@ -1,22 +1,51 @@
 # Devoir 4
 
+# Q1
 def transl(d, s):
+    """()"""
+
+# Q2
+def setOp(list1, list2):
+    """()"""
+    Tliste = list1 + list2
+    list = set(Tliste)
+    return list
+
+# Q3
+def matrixMinMax(m):
+
+    min = m[0][0]
+    max = m[0][0]
     
-    if s in d:
-        af = d[s]
+    for val in m:
+        for x in val:
+            if x < min:
+                min = x
+            if x > max:
+                max = x
+    
+    return (min, max)
 
-    elif s in d.values():
-        for englais, value in d.items():
-            if value == s:
-                af = englais
-    else:
-        af = "Unknown"
-    return af
 
-d = {"apple": "pomme", "banana": "banane", "pear": "poire", "plum": "prune"}
 # Exemples
-print(transl(d, "apple"))  
-print(transl(d, "banane"))  
-print(transl(d, "pear"))  
-print(transl(d, "prune"))  
-print(transl(d, "cy"))  
+print("Question 1")
+d = {"apple": "pomme", "banana": "banane", "pear": "poire", "plum": "prune"}
+print(transl(d,"pear"))
+print(transl(d,"poire"))  
+print(transl(d,"appricot"))  
+print()
+
+# Exemples 2
+print("Question 2")
+print(setOp([1,2,2,3],[2,-6,8,7]))
+print(setOp([],[1,4,2,4,6]))
+print(setOp([1,1,1,1],[]))
+print(setOp([1],[2,3,2,2]))
+print()
+
+# Exemple 3
+print("Question 3")
+print(matrixMinMax([[1,5],[2,8]])) 
+print(matrixMinMax([[1,5,10],[2,8,-1]]))
+print(matrixMinMax([[2,8,-1]]))
+print(matrixMinMax([[1],[1]]))
