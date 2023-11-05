@@ -3,18 +3,25 @@
 # Q1
 def transl(d, s):
     """()"""
+    if s in d:
+        af = d[s]
 
+    elif s in d.values():
+        for englais, value in d.items():
+            if value == s:
+                af = englais
+    else:
+        af = "Unknown"
+    return af
 # Q2
 def setOp(list1, list2):
     """()"""
-    # Je ses pas mais sa dit que ses un ai qui la ecrit?
     list = set(list1 + list2)
     return list
 
 # Q3
 def matrixMinMax(m):
-    """()"""
-# Je ses pas mais sa dit que ses un ai qui la ecrit?
+    """() pas sur"""
     min = m[0][0]
     max = m[0][0]
     
