@@ -5,6 +5,12 @@
         Preconditions: grille est une reference a une matrice 9x9 qui contient déja des nombres de 1 à 9
     '''
     # A COMPLETER
+    linge = True
+
+    for n in range (9):
+        if num == grille[row][n]:
+            linge = False
+    return linge
 
 def verifierCol(grille, col, num):
     '''
@@ -35,8 +41,9 @@ def verifierValide(grille, row, col, num):
    ''' (list, int, int, int) ->  bool
    * verifie si le nombre proposé est bon sur la ligne et colonne et la sous-grille donné en parametre.
    * Preconditions: tab est une reference a une matrice 9 x 9 qui contient des chiffres entre 1 et 9
-   '''
-   
+   '''  
    # A COMPLETER
+   if verifierLigne(grille, row, num) == False:
+       return False
    
 
