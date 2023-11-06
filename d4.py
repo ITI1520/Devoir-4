@@ -3,15 +3,13 @@
 # Q1
 def transl(d, s):
     """()"""
+    af = "Unknown"
     if s in d:
         af = d[s]
-
     elif s in d.values():
         for englais, value in d.items():
             if value == s:
                 af = englais
-    else:
-        af = "Unknown"
     return af
 # Q2
 def setOp(list1, list2):
