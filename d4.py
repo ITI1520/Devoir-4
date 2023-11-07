@@ -16,6 +16,28 @@ def setOp(list1, list2):
     """()"""
     list = set(list1 + list2)
     return list
+############################
+print('test max et min')
+def maxMatrice(m):
+    maxx = max(m[0])
+    minn = min(m[0]) # max dans la première rangée
+ #utilise la fonction Python max 
+    rang = 1 # verification de la rangée 1
+ 
+    while rang < len(m):
+        rangMax = max(m[rang])
+        rangMin = min(m[rang]) 
+        if rangMax > maxx: 
+            maxx = rangMax
+        if rangMin < minn: 
+            minn = rangMin
+        rang = rang + 1 
+    return (minn, maxx)
+19
+#Programme principal
+print(maxMatrice([[1,5],[2,8]])) 
+
+#############################
 
 # Q3
 def matrixMinMax(m):
