@@ -1,27 +1,3 @@
-# Exercise 1 Labo
-
-def somme_matrices(m_1,m_2) :
-    l = len(m_1)
-    c = len(m_1[0])
-
-    m_3 = []
-    i = 0
-    j = 0
-    while i < l :
-        m_3.append([])    
-        while j < c :
-            m_3[i].append(m_1[i][j] + m_2[i][j])
-            j = j + 1
-        i = i + 1
-        j = 0
-
-    return m_3
-
-print(somme_matrices([[1,2],[3,4]], [[1,1],[1,1]]))
-
-###################################################
-
-
 # Devoir 4
 # Q1
 def transl(d, s):
