@@ -16,9 +16,9 @@ def setOp(list1, list2):
     """()"""
     list = set(list1 + list2)
     return list
-############################
-print('test max et min')
-def maxMatrice(m):
+# Q3
+def matrixMinMax(m):
+    """() pas sur"""
     maxx = max(m[0])
     minn = min(m[0]) # max dans la première rangée
  #utilise la fonction Python max 
@@ -33,26 +33,6 @@ def maxMatrice(m):
             minn = rangMin
         rang = rang + 1 
     return (minn, maxx)
-19
-#Programme principal
-print(maxMatrice([[1,5],[2,8]])) 
-
-#############################
-
-# Q3
-def matrixMinMax(m):
-    """() pas sur"""
-    min = m[0][0]
-    max = m[0][0]
-    
-    for val in m:
-        for x in val:
-            if x < min:
-                min = x
-            if x > max:
-                max = x
-    
-    return (min, max)
 
 
 # Exemples

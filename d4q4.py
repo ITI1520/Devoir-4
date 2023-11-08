@@ -31,6 +31,11 @@ def jouer(grille, row, col, num):
     '''
     
     # A COMPLETER
+    if verifierValide(grille, row, col, num) == True :
+        grille[row][col] = num
+        return True
+    else:
+        return False
     
 grille = [[5, 3, 8, 6, 9, 1, 0, 4, 7],
               [7, 4, 6, 0, 3, 2, 8, 1, 9],

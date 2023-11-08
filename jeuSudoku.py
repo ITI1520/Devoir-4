@@ -7,7 +7,7 @@
     # A COMPLETER
     linge = True
 
-    for n in range (9):
+    for n in range (1,9):
         if num == grille[row][n]:
             linge = False
     return linge
@@ -19,6 +19,12 @@ def verifierCol(grille, col, num):
             Preconditions: grille est une reference a une matrice 9x9 qui contient déja des nombres de 1 à 9
     '''
     # A COMPLETER
+    ligne = True
+    for i in range (1,9) :
+        if grille[i][col]==num:
+            ligne = False
+    return ligne
+
 
 def verifierSousGrille(grille, row, col, num):
     '''
@@ -26,8 +32,76 @@ def verifierSousGrille(grille, row, col, num):
             Vérifier si la case à ajouter n'existe pas sur la sous-grille.
             Preconditions: grille est une reference a une matrice 9x9 qui contient déja des nombres de 1 à 9
     '''
-
     # A COMPLETER
+   #si c'est la 1ere case:
+    if 0<=row<=2 and 0<=col<=2 :
+        for i in range (3) :
+            for j in range (3) :
+                if grille[i][j] == num :
+                    return False
+
+    #si c'est la 2e case:
+    if 0<=row<=2 and 3<=col<=5 :
+        for m in range (3) :
+            for n in range (3,6) :
+                if grille[m][n] == num :
+                    return False
+
+    #si c'est la 3e case:
+    if 0<=row<=2 and 6<=col<=8 :
+        for q in range (3) :
+            for p in range (6,9) :
+                if grille[q][p] == num :
+                    return False
+                             
+    # MILIEU : 
+
+    #si c'est la 4e case:
+    if 3<=row<=5 and 0<=col<=2 :
+        for k in range (3,6) :
+            for h in range (3) :
+                if grille[k][h] == num :
+                    return False
+                
+    #si c'est la 5e case:
+    if 3<=row<=5 and 3<=col<=5 :
+        for k in range (3,6) :
+            for h in range (3,6) :
+                if grille[k][h] == num :
+                    return False
+                
+    #si c'est la 6e case:
+    if 3<=row<=5 and 6<=col<=8 :
+        for k in range (3,6) :
+            for h in range (6,9) :
+                if grille[k][h] == num :
+                    return False
+
+    # BAS
+
+    #si c'est la 7e case:
+    if 6<=row<=8 and 0<=col<=2 :
+        for l in range (6,9) :
+            for s in range (3) :
+                if grille[l][s] == num :
+                    return False
+          
+    #si c'est la 8e case:       
+    if 6<=row<=8 and 3<=col<=5 :
+        for a in range (6,9) :
+            for b in range (3,6) :
+                if grille[a][b] == num :
+                    return False
+                
+    #si c'est la 9e case:
+    if 6<=row<=8 and 6<=col<=8 :
+        for y in range (6,9) :
+            for z in range (6,9) :
+                if grille[y][z] == num :
+                    return False
+
+   
+    return True
 
 def verifierGagner(grille):
     '''(list) ->  bool
@@ -36,14 +110,26 @@ def verifierGagner(grille):
     '''
     
    # A COMPLETER
+    gagner = True
+    for i in range (9) :
+        for x in range (9) :
+            if grille[i][x] == 0 :
+                gagner = False
+    return gagner
   
 def verifierValide(grille, row, col, num):
    ''' (list, int, int, int) ->  bool
    * verifie si le nombre proposé est bon sur la ligne et colonne et la sous-grille donné en parametre.
    * Preconditions: tab est une reference a une matrice 9 x 9 qui contient des chiffres entre 1 et 9
    '''  
+   valide = True
    # A COMPLETER
    if verifierLigne(grille, row, num) == False:
-       return False
-   
+        valide = False
+   if verifierCol(grille, col, num) == False :
+        valide = False
+   if verifierSousGrille(grille, row, col, num) == False:
+        valide = False
+
+   return valide   
 
