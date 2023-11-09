@@ -29,13 +29,13 @@ def jouer(grille, row, col, num):
     Preconditions: grille est une réference sur une liste de 9x9 contient seulement des nombres
     grille est modifié (un element est ajouté dans la grille) si la case est valide est correcte.
     '''
-    
+    jou = False
     # A COMPLETER
     if verifierValide(grille, row, col, num) == True :
         grille[row][col] = num
-        return True
-    else:
-        return False
+        jou = True
+
+    return jou
     
 grille = [[5, 3, 8, 6, 9, 1, 0, 4, 7],
               [7, 4, 6, 0, 3, 2, 8, 1, 9],
