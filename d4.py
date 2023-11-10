@@ -1,24 +1,24 @@
 # Devoir 4
 # Q1
 def transl(d, s):                        # Fonction trans1 qui prend en entrez d(dictionaire), s(string)
-    """ (dict{str}, str) -> str """      # Contrat de type
+    """ (dict, str) -> str """           # Contrat de type
     af = "Unknown"                       # Initialise af a "Unknown"
 
     if s in d:                           # Vérifie si "s" est une clée dans le dictionaire "d"         
         af = d[s]                        # Si oui on affiche la traduction qui est dans le dictionaire "d"
-    elif s in d.values():                #
-        for anglais, value in d.items(): #
+    elif s in d.values():                # 
+        for anglais, value in d.items(): # 
             if value == s:               # Si value est égal a s
                 af = anglais             # On initialise af a "anglais"
     return af                            # Retourne la valeur de af
 # Q2
 def setOp(list1, list2):                                   # Fonction setOp qui prend en entrez list1(list), list2(list)
-    """ List[[float], [float]] -> dict{float}  """         # Contrat de type
+    """ (List) -> dict  """         # Contrat de type
     list = set(list1 + list2)                              # Initialise list a "set(list1 + list2)" et le tranforme en dictionaire
     return list                                            # Retourne list en dictionaire
 # Q3
 def matrixMinMax(m):                                       # Fonction matrixMinMax qui prend en entrez une liste avec 2 liste a l'interieure                        
-    """ List[[float],[float]] -> Tuple(float, float) """   # Contrat de type
+    """ (List) -> Tuple """   # Contrat de type
     maxx, minn = max(m[0]), min(m[0])                      # On initialise maxx a "max(m[0])" et minn a "min(m[0])"
     
  
