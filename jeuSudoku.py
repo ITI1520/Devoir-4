@@ -1,4 +1,5 @@
-﻿# Nom : Nicola Baker - Samuel Dicaire
+﻿# Groupe 23
+# Nom : Nicola Baker - Samuel Dicaire
 # Numéro étudiant : 300360908 - 
 # Devoir 4 Jeu Sudoku
 

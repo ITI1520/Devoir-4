@@ -1,4 +1,9 @@
-﻿from jeuSudoku import *
+﻿# Groupe 23
+# Nom : Nicola Baker - Samuel Dicaire
+# Numéro étudiant : 300360908 - 
+# Devoir 4 Jeu Sudoku
+
+from jeuSudoku import *
 
 def afficherGrille(grille):
     '''

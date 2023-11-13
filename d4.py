@@ -1,4 +1,8 @@
+# Groupe 23
+# Nom : Nicola Baker - Samuel Dicaire
+# Numéro étudiant : 300360908 - 
 # Devoir 4
+
 # Q1
 def transl(d, s):                        # Fonction trans1 qui prend en entrez d(dictionaire), s(string)
     """ (dict, str) -> str """           # Contrat de type
