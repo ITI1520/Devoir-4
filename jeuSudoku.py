@@ -1,4 +1,8 @@
-﻿def verifierLigne(grille, row, num):
+﻿# Nom : Nicola Baker - Samuel Dicaire
+# Numéro étudiant : 300360908 - 
+# Devoir 4 Jeu Sudoku
+
+def verifierLigne(grille, row, num):
     '''
         (list, int, int) -> Bool
         Vérifier si la case à ajouter n'existe pas sur la ligne.
@@ -35,73 +39,75 @@ def verifierSousGrille(grille, row, col, num):
     # A COMPLETER
     verifier = True
     #1ere ligne:
-    for i in range (3) :
+    if 0<=row<=2:
+        for i in range (3) :
 
-        #1ere case:
-        if 0<=row<=2 and 0<=col<=2 :
+            #1ere case:
+            if 0<=col<=2:
                 for x in range (3) :
                     if grille[i][x] == num :
                         verifier = False
 
-        #2e case:
-        elif 0<=row<=2 and 3<=col<=5 :
+            #2e case:
+            elif 3<=col<=5:
                 for x in range (3,6) :
                     if grille[i][x] == num :
                         verifier = False
 
-        #3e case:
-        elif 0<=row<=2 and 6<=col<=8 :
+            #3e case:
+            elif 6<=col<=8:
                 for x in range (6,9) :
                     if grille[i][x] == num :
                         verifier = False
                              
     # MILIEU : 
+    elif 3<=row<=5:
+        for i in range (3,6) :
 
-    for i in range (3,6) :
-
-        #4e case:
-        if 3<=row<=5 and 0<=col<=2 :
+            #4e case:
+            if 0<=col<=2 :
                 for x in range (3) :
                     if grille[i][x] == num :
                         verifier = False
-                    
-        #5e case:
-        elif 3<=row<=5 and 3<=col<=5 :
+                        
+            #5e case:
+            elif 3<=col<=5 :
                 for x in range (3,6) :
                     if grille[i][x] == num :
                         verifier = False
-                    
-        #6e case:
-        elif 3<=row<=5 and 6<=col<=8 :
+                        
+            #6e case:
+            elif 6<=col<=8 :
                 for x in range (6,9) :
                     if grille[i][x] == num :
                         verifier = False
 
     # BAS :
+    elif 6<=row<=8:
+        for i in range (6,9) :
 
-    for i in range (6,9) :
-    #si c'est la 7e case:
-        if 6<=row<=8 and 0<=col<=2 :
+        #si c'est la 7e case:
+            if 0<=col<=2 :
                 for x in range (3) :
                     if grille[i][x] == num :
                         verifier = False
-            
-        #si c'est la 8e case:       
-        if 6<=row<=8 and 3<=col<=5 :
+                
+            #si c'est la 8e case:       
+            if 3<=col<=5 :
                 for x in range (3,6) :
                     if grille[i][x] == num :
                         verifier = False
-                    
-        #si c'est la 9e case:
-        if 6<=row<=8 and 6<=col<=8 :
+                        
+            #si c'est la 9e case:
+            if 6<=col<=8 :
                 for x in range (6,9) :
                     if grille[i][x] == num :
                         verifier = False
 
-   
     return verifier
 
 def verifierGagner(grille):
+
     '''(list) ->  bool
     * Preconditions: grille est une reference a une matrice 9x9 qui contient de nombres de 1 à 9
     * Verifie si la grille est completement remplie.
@@ -111,7 +117,7 @@ def verifierGagner(grille):
     gagner = True
     for i in range (9) :
         for x in range (9) :
-            if grille[i][x] == 0 :
+            if 0 == grille[i][x]:
                 gagner = False
     return gagner
   
