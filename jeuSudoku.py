@@ -1,6 +1,6 @@
 ﻿# Groupe 23
 # Nom : Nicola Baker - Samuel Dicaire
-# Numéro étudiant : 300360908 - 
+# Numéro étudiant : 300360908 - 300355587
 # Devoir 4 Jeu Sudoku
 
 def verifierLigne(grille, row, num):
@@ -9,13 +9,14 @@ def verifierLigne(grille, row, num):
         Vérifier si la case à ajouter n'existe pas sur la ligne.
         Preconditions: grille est une reference a une matrice 9x9 qui contient déja des nombres de 1 à 9
     '''
-    # A COMPLETER
-    linge = True
 
-    for i in range (1,9):
-        if num == grille[row][i]:
-            linge = False
-    return linge
+    # CODE AJOUTER ***
+    linge = True                     # Initialise la variable "linde" a True
+
+    for i in range (1,9):            # Parcour les collone de la ligne de 1 a 8
+        if num == grille[row][i]:    # Regarde si num existe deja dans la ligne
+            linge = False            # Si oui on remet la variable "linge" a False
+    return linge                     # Retourne la valeur de linge
 
 def verifierCol(grille, col, num):
     '''
@@ -23,12 +24,13 @@ def verifierCol(grille, col, num):
             Vérifier si la case à ajouter n'existe pas sur la colonne.
             Preconditions: grille est une reference a une matrice 9x9 qui contient déja des nombres de 1 à 9
     '''
-    # A COMPLETER
-    ligne = True
-    for i in range (1,9) :
-        if num == grille[i][col]:
-            ligne = False
-    return ligne
+
+    # CODE AJOUTER ***
+    ligne = True                     # Initialise la variable "ligne" a True       
+    for i in range (1,9) :           # Parcour les ligne de la collone de 1 a 8
+        if num == grille[i][col]:    # Regarde si num existe deja dans la collone
+            ligne = False            # Si oui on remet la variable "ligne" a False
+    return ligne                     # Retourne la valeur de ligne
 
 
 def verifierSousGrille(grille, row, col, num):
@@ -37,8 +39,10 @@ def verifierSousGrille(grille, row, col, num):
             Vérifier si la case à ajouter n'existe pas sur la sous-grille.
             Preconditions: grille est une reference a une matrice 9x9 qui contient déja des nombres de 1 à 9
     '''
-    # A COMPLETER
-    verifier = True
+
+    # CODE AJOUTER ***
+    verifier = True          # Initialise la variable "verifier" a True
+
     #1ere ligne:
     if 0<=row<=2:
         for i in range (3) :
@@ -105,7 +109,7 @@ def verifierSousGrille(grille, row, col, num):
                     if grille[i][x] == num :
                         verifier = False
 
-    return verifier
+    return verifier                              # Retourne la valeur de verifier
 
 def verifierGagner(grille):
 
@@ -114,20 +118,24 @@ def verifierGagner(grille):
     * Verifie si la grille est completement remplie.
     '''
     
-   # A COMPLETER
-    gagner = True
-    for i in range (9) :
-        for x in range (9) :
-            if 0 == grille[i][x]:
-                gagner = False
-    return gagner
+   # CODE AJOUTER ***
+    gagner = True                   # Initialise la variable "gagner" a True
+    for i in range (9) :            # Regarde toute les ligne et collone de la grille
+        for x in range (9) :        
+            if 0 == grille[i][x]:   # Regarde si il y as une casse qui est egal a 0
+                gagner = False      # Si oui on mais "gagner" a False
+    return gagner                   # Retourne la valeur de gagner
   
 def verifierValide(grille, row, col, num):
    ''' (list, int, int, int) ->  bool
    * verifie si le nombre proposé est bon sur la ligne et colonne et la sous-grille donné en parametre.
    * Preconditions: tab est une reference a une matrice 9 x 9 qui contient des chiffres entre 1 et 9
    '''  
-   # A COMPLETER
+
+   # CODE AJOUTER ***
+   
+   ''' Verifie les nombre et si aumoin un des nombre nest pas bon "valide" = False sinon "valide" = True'''
+
    if verifierLigne(grille, row, num) == False:
         valide = False
    elif verifierCol(grille, col, num) == False :
@@ -137,5 +145,5 @@ def verifierValide(grille, row, col, num):
    else : 
         valide = True
 
-   return valide   
+   return valide                # Retourne la valeur de "valide"
 

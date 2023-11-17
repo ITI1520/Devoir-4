@@ -1,6 +1,6 @@
 ﻿# Groupe 23
 # Nom : Nicola Baker - Samuel Dicaire
-# Numéro étudiant : 300360908 - 
+# Numéro étudiant : 300360908 - 300355587
 # Devoir 4 Jeu Sudoku
 
 from jeuSudoku import *
@@ -34,14 +34,17 @@ def jouer(grille, row, col, num):
     Preconditions: grille est une réference sur une liste de 9x9 contient seulement des nombres
     grille est modifié (un element est ajouté dans la grille) si la case est valide est correcte.
     '''
-    jou = False
-    # A COMPLETER
-    if verifierValide(grille, row, col, num) == True :
-        grille[row][col] = num
-        jou = True
-
-    return jou
     
+    # CODE AJOUTER ***
+    jou = False                                         # Initialise la variable "jou" a False1
+   
+    if verifierValide(grille, row, col, num) == True :  # Apelle la fonction "verifierValide" avec "grille", "row", "col", "num"
+        grille[row][col] = num                          # Si la condition est vrais, on place le numero dans la grille
+        jou = True                                      # Change la valeur de "jou" a True
+
+    return jou                                          # Retourne la valeur de jou
+    
+
 grille = [[5, 3, 8, 6, 9, 1, 0, 4, 7],
               [7, 4, 6, 0, 3, 2, 8, 1, 9],
               [1, 9, 2, 0, 8, 4, 3, 5, 6],

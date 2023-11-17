@@ -1,6 +1,6 @@
 # Groupe 23
 # Nom : Nicola Baker - Samuel Dicaire
-# Numéro étudiant : 300360908 - 
+# Numéro étudiant : 300360908 - 300355587
 # Devoir 4
 
 # Q1
