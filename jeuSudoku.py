@@ -120,8 +120,8 @@ def verifierGagner(grille):
     
    # CODE AJOUTER ***
     gagner = True                   # Initialise la variable "gagner" a True
-    for i in range (9) :            # Regarde toute les ligne et collone de la grille
-        for x in range (9) :        
+    for i in range (1,9) :            # Regarde toute les ligne et collone de la grille
+        for x in range (1,9) :        
             if 0 == grille[i][x]:   # Regarde si il y as une casse qui est egal a 0
                 gagner = False      # Si oui on mais "gagner" a False
     return gagner                   # Retourne la valeur de gagner

@@ -25,7 +25,6 @@ def matrixMinMax(m):                                       # Fonction matrixMinM
     """ (List) -> Tuple """   # Contrat de type
     maxx, minn = max(m[0]), min(m[0])                      # On initialise maxx a "max(m[0])" et minn a "min(m[0])"
     
- 
     rang = 1                                            # On initialise rang avec une valeur de 1
  
     while rang < len(m):                                # Boucle while qui s'exécute tant que rang est plus petit que la longeur de m 
